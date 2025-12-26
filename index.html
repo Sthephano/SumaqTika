@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumaq Tika - Centro Cultural de Danza</title>
+
+<style>
+:root{
+    --negro:#000;
+    --azul:#00bcd4;
+    --naranja:#ff7a18;
+    --amarillo:#ffd32a;
+    --rojo:#c8102e;
+    --blanco:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background:var(--negro);
+    color:var(--blanco);
+    line-height:1.6;
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.fade{
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+}
+
+.delay-1{animation-delay:.2s;}
+.delay-2{animation-delay:.4s;}
+.delay-3{animation-delay:.6s;}
+
+/* ================= HEADER ================= */
+header{
+    text-align:center;
+    padding:60px 20px;
+    border-bottom:2px solid var(--rojo);
+}
+
+header img{
+    width:170px;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:2.1em;
+    letter-spacing:3px;
+    color:var(--amarillo);
+}
+
+header p{
+    margin-top:8px;
+    color:var(--azul);
+}
+
+/* ================= NAVIDAD ================= */
+.navidad{
+    text-align:center;
+    padding:30px 20px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.navidad h2{
+    color:var(--rojo);
+    font-size:1.7em;
+}
+
+.navidad p{
+    margin-top:10px;
+    color:#ddd;
+}
+
+/* ================= BOTÓN TIKTOK ================= */
+.tiktok{
+    text-align:center;
+    margin-top:20px;
+}
+
+.tiktok a{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 26px;
+    border-radius:30px;
+    background:#111;
+    color:var(--blanco);
+    text-decoration:none;
+    border:1px solid var(--azul);
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+.tiktok a:hover{
+    background:var(--azul);
+    color:#000;
+    transform:scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+section h2{
+    text-align:center;
+    font-size:1.9em;
+    margin-bottom:25px;
+    color:var(--naranja);
+}
+
+/* ================= ABOUT ================= */
+.about{
+    text-align:center;
+    color:#ddd;
+}
+
+/* ================= DANCES ================= */
+.dances{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    padding:28px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,188,212,.2);
+}
+
+.card h3{
+    color:var(--amarillo);
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#ccc;
+}
+
+/* ================= CONTACT ================= */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:8px 0;
+    color:#ddd;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* ================= FOOTER ================= */
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:2px solid var(--rojo);
+    color:#aaa;
+    font-size:.9em;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:600px){
+    header h1{font-size:1.6em;}
+    .navidad h2{font-size:1.4em;}
+    section h2{font-size:1.6em;}
+}
+</style>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+    const windowHeight = window.innerHeight;
+    const elementVisible = 120;
+
+    reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - elementVisible){
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active"); // 👈 desaparece al subir
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</head>
+<body>
+
+<header class="fade">
+    <img src="logo.png" alt="Sumaq Tika">
+    <h1>AGRUPACIÓN CULTURAL ARTÍSTICA</h1>
+    <p>Sumaq Tika – Danza y Tradición Andina</p>
+</header>
+
+<div class="navidad fade delay-1">
+    <h2>🎄 Feliz Navidad y Próspero Año Nuevo 🎆</h2>
+    <p>
+        Este 26 de diciembre, Sumaq Tika les desea
+        un nuevo año lleno de cultura y tradición peruana.
+    </p>
+
+    <div class="tiktok">
+        <!-- CAMBIA EL ENLACE -->
+        <a href="https://www.tiktok.com/@sumaqtika.p" target="_blank">Síguenos en TikTok
+        </a>
+    </div>
+</div>
+
+<section class="fade delay-2">
+    <h2>¿Quiénes Somos?</h2>
+    <p class="about">
+        Sumaq Tika es una agrupación cultural artística dedicada
+        a preservar y difundir las danzas tradicionales del Perú,
+        fortaleciendo nuestra identidad cultural.
+    </p>
+</section>
+
+<section class="fade delay-3">
+    <h2>Danzas que Representamos</h2>
+    <div class="dances">
+        <div class="card">
+            <h3 style="text-align: center;">Carnaval de Maucallacta</h3>
+            <p>
+                Danza festiva que simboliza la unión,
+                la alegría y la tradición de nuestros pueblos.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 style="text-align: center;">Carnaval de Ñaupallacta</h3>
+            <p>
+                Expresión cultural llena de color y energía
+                que representa el espíritu andino.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="fade delay-3">
+    <h2>Contacto</h2>
+    <div class="contact">
+        <p>📍 Centro Cultural de Danza Sumaq Tika</p>
+        <p>📞 +51 XXX XXX XXX</p>
+        <p>📧 contacto@sumaqtika.pe</p>
+    </div>
+</section>
+
+<footer class="fade delay-3">
+    © 2025 Sumaq Tika – Agrupación Cultural Artística  
+    <br>🇵🇪 Cultura viva del Perú 🇵🇪
+</footer>
+
+</body>
+</html>
