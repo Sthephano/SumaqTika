@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumaq Tika | Agrupación Cultural Artística</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Menú de navegación minimalista y flotante -->
+    <nav class="nav-minimal">
+        <div class="nav-container">
+            <a href="#" class="brand">Sumaq Tika</a>
+            <div class="nav-items">
+                <a href="#nosotros">Esencia</a>
+                <a href="#danzas">Danzas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera Principal (Hero) -->
+    <header class="hero">
+        <div class="hero-logo">
+            <img src="logo.jpg" alt="Sumaq Tika Logo">
+        </div>
+        <span class="subtitle-top">Agrupación Cultural Artística</span>
+        <h1>Sumaq Tika</h1>
+        <p class="hero-desc">Preservando el alma y la tradición viva de nuestras danzas peruanas.</p>
+        
+        <div class="action-wrapper">
+            <a href="https://www.tiktok.com/@sumaqtika.p" target="_blank" class="btn-outline">
+                🎵 Síguenos en TikTok
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección: ¿Quiénes Somos? -->
+    <section id="nosotros" class="section-container reveal">
+        <div class="section-header">
+            <h2>Nuestra Esencia</h2>
+            <div class="divider"></div>
+        </div>
+        <p class="about-text">
+            Sumaq Tika es una agrupación cultural dedicada a rescatar, preservar y difundir 
+            la riqueza de las danzas tradicionales del Perú. Cada presentación es un homenaje 
+            a nuestra identidad, llevando con orgullo el folclore de nuestros pueblos a cada escenario.
+        </p>
+        
+        <!-- Galería de imágenes con efecto interactivo -->
+        <div class="editorial-grid">
+            <div class="editorial-img">
+                <img src="https://i.ytimg.com/vi/2EDp4nEyoWw/maxresdefault.jpg" alt="Ensayo o presentación Sumaq Tika" class="img-modal-trigger" onerror="this.style.display='none'">
+            </div>
+            <div class="editorial-img">
+                <img src="https://scontent.flim6-3.fna.fbcdn.net/v/t39.30808-6/649760524_122173191908764079_4424992942504933309_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1366&ctp=s2048x1366&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGaKtSlcazHyXsbV2btjrzb3Etd2qxLcLjcS13arEtwuGT_wIw2ETVCeAqiP3WfUaXOH08I70ZMjWris8_aQEur&_nc_ohc=tsjgxAbAO_kQ7kNvwE7nmP5&_nc_oc=AdpB3LgdvJ-VQl6IJZoWBxY6BVyt3-HLcbMah-i-l7CJCqDfTNuSdJTHSqO8zZte-kQ&_nc_zt=23&_nc_ht=scontent.flim6-3.fna&_nc_gid=IHvSvf6UxgoLxlsGzC8V_Q&_nc_ss=792a8&oh=00_AQNsb4Af03pNEXqzFvSjTjUIjKeoZ1VQq73hjftnMlf8rA&oe=6AD769B9" alt="Trajes típicos de la agrupación" class="img-modal-trigger" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <!-- Mini-ventana (Modal Lightbox) -->
+        <div id="imageModal" class="modal-overlay">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+        </div>
+    </section>
+
+    <!-- Sección: Danzas y Videos -->
+    <section id="danzas" class="section-container reveal">
+        <div class="section-header">
+            <h2>Danzas que Representamos</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="dances-grid">
+            <!-- Tarjeta 1 -->
+            <article class="card">
+                <div class="card-content">
+                    <h3>Carnaval de Maucallacta</h3>
+                    <p>Danza festiva de Ayacucho que simboliza la unión, la alegría y la tradición ancestral de nuestros pueblos.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2EDp4nEyoWw?si=sV8Sodus_OfzuhMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="card">
+                <div class="card-content">
+                    <h3>Carnaval de Ñaupallacta</h3>
+                    <p>Expresión cultural andina llena de color, fuerza rítmica y una energía vibrante sobre el escenario.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dWM25MGhN_s?si=vTtfWMFczOgrnoEm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto -->
+    <section id="contacto" class="section-container reveal">
+        <div class="contact-box">
+            <h2>Contacto</h2>
+            <p class="org-name">Centro Cultural de Danza Sumaq Tika</p>
+            <div class="contact-details">
+                <p>960 727 294</p>
+                <p>contacto@sumaqtika.pe</p>
+            </div>
+            <div class="action-wrapper" style="margin-top: 25px;">
+                <a href="https://api.whatsapp.com/send?phone=51960727294&text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20de%20Sumaq%20Tika" target="_blank" class="btn-primary">
+                    Escribir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Sumaq Tika – Agrupación Cultural Artística</p>
+        <p class="footer-peru">🇵🇪 Cultura viva del Perú 🇵🇪</p>
+    </footer>
+
+    <!-- Script de Animaciones y Lightbox -->
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll(){
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if(elementTop < windowHeight - 100){
+                    el.classList.add("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const images = document.querySelectorAll(".img-modal-trigger");
+        const closeBtn = document.querySelector(".modal-close");
+
+        images.forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener("click", closeModal);
+        }
+
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
